@@ -60,14 +60,18 @@ import studentProfile from './pages/student-profile.vue'
 
 import teacher from './pages/teacher.vue'
 import admin from './pages/admin.vue'
+import methodist from './pages/methodist.vue'
+import login from './pages/login.vue'
 
 
 const routes = [
   { path: '/admin', component: admin },
   { path: '/student', component: student },
   { path: '/student/:id', component: studentProfile },
-  { path: '/admin', component: admin }
-
+  { path: '/teacher', component: teacher },
+  { path: '/methodist', component: methodist },
+  { path: '/login', component: login },
+  { path: '/', component: login }
 ]
 
 // 3. Create the router instance and pass the `routes` option
@@ -88,8 +92,9 @@ export default {
     return {
       drawer: null,
       items: [
+        { title: 'Авторизація', icon: 'dashboard', route: '/login' },
         { title: 'Адмін', icon: 'dashboard', route: '/admin' },
-        { title: 'Методист', icon: 'question_answer', route: '/method' },
+        { title: 'Методист', icon: 'question_answer', route: '/methodist' },
         { title: 'Викладач', icon: 'dashboard', route: '/teacher' },
         { title: 'Студент', icon: 'question_answer', route: '/student' }
       ],
