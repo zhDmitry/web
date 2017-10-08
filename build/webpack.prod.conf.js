@@ -1,4 +1,3 @@
-
 const path = require('path');
 const utils = require('./utils');
 const webpack = require('webpack');
@@ -40,10 +39,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
@@ -102,16 +97,6 @@ const webpackConfig = merge(baseWebpackConfig, {
 
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin');
-
-  webpackConfig.plugins.push(
-    new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: new RegExp(`\\.(${config.build.productionGzipExtensions.join('|')})$`),
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
-  );
 }
 
 if (config.build.bundleAnalyzerReport) {
