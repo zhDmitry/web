@@ -11,17 +11,19 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "prepush": "npm run deploy"
   },
   "dependencies": {
-    "faker": "^4.1.0",
-    "gh-pages": "^1.0.0",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
     "vuetify": "*",
     "vuex": "*"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
+    "faker": "^4.1.0",
+    "gh-pages": "^1.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
