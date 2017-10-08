@@ -6,8 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && cp ./public/index.html ./dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://zhdmitry.github.io/web",
   "dependencies": {
     "eslint": "^4.8.0",
     "eslint-plugin-vue": "^3.13.0",

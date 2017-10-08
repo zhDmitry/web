@@ -37,7 +37,9 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: "index.dev.html"
+    },
     noInfo: true
   },
   performance: {
