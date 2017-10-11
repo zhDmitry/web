@@ -186,7 +186,7 @@
 </template>
 
 <script>
-import MethodistForm from '../components/admin/methodist-form';
+import MethodistForm from '../components/methodist-form';
 export default {
   components: {
     MethodistForm
