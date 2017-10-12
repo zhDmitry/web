@@ -8,9 +8,9 @@
       </v-card-title>
       <v-data-table v-bind:headers="headers" v-bind:items="items" v-bind:search="search">
         <template slot="items" scope="props">
-          <td>{{ props.item.name }}</td>
-          <td class="text-xs-right">{{ props.item.teacher }}</td>
+          <td>{{ props.item.subject }}</td>
           <td class="text-xs-right">{{ props.item.group }}</td>
+          <td class="text-xs-right">{{ props.item.teacher }}</td>
           <td class="text-xs-right">
             <calendar />
           </td>
@@ -34,13 +34,13 @@ export default {
       pagination: {},
       headers: [
         {
-          text: 'Назва',
+          text: 'Дисципліна',
           align: 'left',
-          sortable: false,
-          value: 'name'
+          sortable: true,
+          value: 'subject'
         },
-        { text: 'Група', value: 'group' },
-        { text: 'Викладач', value: 'teacher' },
+        { text: 'Група', sortable: true, value: 'group' },
+        { text: 'Викладач', sortable: true, value: 'teacher' },
       ],
       items: require('../../mock/student-mock.json')
     }
