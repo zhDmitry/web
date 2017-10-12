@@ -20,7 +20,7 @@
             <v-select
               v-model="role"
               label="роль"
-              :items="roles"
+              :items="roleLabels"
               :rules="[v => !!v || 'Обов\'язкове поле']"
             ></v-select>
             <v-btn color="primary" class="ml-0" @click="signIn">
@@ -34,6 +34,13 @@
 </template>
 
 <script>
+const ROLES = {
+  'Адміністратор': 'admin',
+  'Студент': 'student',
+  'Викладач': 'teacher',
+  'Методист': 'methodist'
+};
+
 export default {
   name: 'login',
   data: () => ({
@@ -41,23 +48,14 @@ export default {
     email: '',
     password: '',
     role: null,
-    roles: [
-      'Студент',
-      'Викладач',
-      'Методист',
-      'Адміністратор'
-    ]
+    roleLabels: Object.keys(ROLES).sort()
   }),
   methods: {
     signIn() {
       if (this.$refs.form.validate()) {
-        let roleMap = {
-          'Студент': '/student',
-          'Викладач': '/teacher',
-          'Методист': '/methodist',
-          'Адміністратор': '/admin'
-        };
-        this.$router.push(roleMap[this.role]);
+        let role = ROLES[this.role];
+        let userId = '1337';
+        this.$store.dispatch('signIn', {role, userId});
       }
     }
   }

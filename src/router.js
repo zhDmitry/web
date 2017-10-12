@@ -1,14 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+import store from '@/store/index';
+
 import Login from '@/components/login.vue';
 import UserLayout from '@/components/user-layout.vue';
 
-import Admin from '@/pages/admin.vue';
-import Methodist from '@/pages/methodist.vue';
-import Student from '@/pages/student.vue';
-import StudentProfile from '@/pages/student-profile.vue';
-import Teacher from '@/pages/teacher.vue';
+import MethodistList from '@/pages/methodist-list.vue';
+import StudentGrades from '@/pages/student-grades.vue';
+import StudentList from '@/pages/student-list.vue';
+import StudentSubjects from '@/pages/student-subjects.vue';
+import TeacherList from '@/pages/teacher-list.vue';
 
 const routes = [
   {
@@ -17,17 +19,20 @@ const routes = [
   },
   {
     path: '/login',
-    component: Login
+    component: Login,
+    beforeEnter: (to, from, next) => {
+      store.state.role ? store.dispatch('redirectToHome') : next();
+    }
   },
   {
     path: '/',
     component: UserLayout,
     children: [
-      { path: '/admin', component: Admin },
-      { path: '/student', component: Student },
-      { path: '/student/:id', component: StudentProfile },
-      { path: '/teacher', component: Teacher },
-      { path: '/methodist', component: Methodist }
+      { path: '/methodists', component: MethodistList },
+      { path: '/students', component: StudentList },
+      { path: '/students/:id/grades', component: StudentGrades },
+      { path: '/students/:id/subjects', component: StudentSubjects },
+      { path: '/teachers', component: TeacherList }
     ]
   }
 ];

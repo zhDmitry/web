@@ -107,10 +107,6 @@ export default {
       }
       this.$data.dialog = v;
     }
-  },
-  mounted() {
-    console.log($(this.$refs.calendar));
   }
-
 }
 </script>
