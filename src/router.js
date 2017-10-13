@@ -10,6 +10,8 @@ import MethodistList from '@/pages/methodist-list.vue';
 import StudentGrades from '@/pages/student-grades.vue';
 import StudentList from '@/pages/student-list.vue';
 import StudentSubjects from '@/pages/student-subjects.vue';
+import StudentPerformance from '@/pages/student-performance.vue';
+import SubjectList from '@/pages/subject-list.vue';
 import TeacherList from '@/pages/teacher-list.vue';
 
 const routes = [
@@ -30,9 +32,11 @@ const routes = [
     children: [
       { path: '/methodists', component: MethodistList },
       { path: '/students', component: StudentList },
+      { path: '/students-performance', component: StudentPerformance },
       { path: '/students/:id/grades', component: StudentGrades },
       { path: '/students/:id/subjects', component: StudentSubjects },
-      { path: '/teachers', component: TeacherList }
+      { path: '/teachers', component: TeacherList },
+      { path: '/subjects', component: SubjectList }
     ]
   }
 ];

@@ -55,7 +55,8 @@ export default {
       if (this.$refs.form.validate()) {
         let role = ROLES[this.role];
         let userId = '1337';
-        this.$store.dispatch('signIn', {role, userId});
+        let fullName = "Генадій Малашонок"; // TODO change this
+        this.$store.dispatch('signIn', {role, userId, fullName});
       }
     }
   }

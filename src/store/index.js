@@ -9,12 +9,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     role: null,
-    userId: null
+    userId: null,
+    fullName: null
   },
   mutations: {
     signIn(state, payload) {
       state.role = payload.role;
       state.userId = payload.userId;
+      state.fullName = payload.fullName;
     },
     signOut(state) {
       state.role = null;

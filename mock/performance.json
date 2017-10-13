@@ -1,0 +1,47 @@
+[
+  {
+    "id": "59e1407126b7154fbe3a388d",
+    "subject": "Програмування Haskell",
+    "group": "Група 1",
+    "avg_mark": 70.8425,
+    "max_mark": 74,
+    "min_mark": 61,
+    "percentage_succeeded": 81.0114
+  },
+  {
+    "id": "59e14071b7f701ba9953169b",
+    "subject": "Програмування Haskell",
+    "group": "Група 2",
+    "avg_mark": 55.5032,
+    "max_mark": 79,
+    "min_mark": 47,
+    "percentage_succeeded": 74.149
+  },
+  {
+    "id": "59e14071a23494551ec6e18d",
+    "subject": "Творче письмо",
+    "group": "Група 1",
+    "avg_mark": 76.9551,
+    "max_mark": 72,
+    "min_mark": 50,
+    "percentage_succeeded": 74.556
+  },
+  {
+    "id": "59e140719bd9c89262fbf0f7",
+    "subject": "Психологія впливу та успіху",
+    "group": "Група 1",
+    "avg_mark": 55.8516,
+    "max_mark": 73,
+    "min_mark": 44,
+    "percentage_succeeded": 91.6766
+  },
+  {
+    "id": "59e14071aa8bbb2fb7bcfdb7",
+    "subject": "Психологія впливу та успіху",
+    "group": "Група 2",
+    "avg_mark": 59.9084,
+    "max_mark": 100,
+    "min_mark": 62,
+    "percentage_succeeded": 89.9628
+  }
+]

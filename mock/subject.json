@@ -1,0 +1,26 @@
+[
+   {
+      "id":"a6699eaa-929d-4d37-a8ce-05eab31959a6",
+      "subject":"Програмування Haskell",
+      "university":"Naukma",
+      "faculty":"ФІ",
+      "department":"Інформатики",
+      "teacher": "Володимир Проценко"
+   },
+   {
+      "id":"ee887326-8add-4b51-8b34-07760927cfd0",
+      "subject":"Творче письмо",
+      "university":"Naukma",
+      "faculty":"ФГН",
+      "department":"Англійської мови",
+      "teacher": "Ярополк Шамрило"
+   },
+   {
+      "id":"0dae6592-fcae-4fdd-a71a-0c32f546b5d0",
+      "subject":"Психологія впливу та успіху",
+      "university":"Naukma",
+      "faculty":"ФСНСТ",
+      "department":"Психології",
+      "teacher": "Андрій Гірник"
+   }
+]

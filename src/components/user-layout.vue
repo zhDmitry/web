@@ -50,6 +50,21 @@ export default {
       icon: 'group',
       click: () => this.navigate('/students')
     };
+    let scheduleListItem = {
+      title: 'Групи та розклад',
+      icon: 'event',
+      click: () => this.navigate('/students/42/subjects') // TODO change this
+    };
+    let performanceListItem = {
+      title: 'Успішність студентів',
+      icon: 'group',
+      click: () => this.navigate('/students-performance')
+    };
+    let subjectsListItem = {
+      title: 'Дисципліни',
+      icon: 'group',
+      click: () => this.navigate('/subjects')
+    };
 
     let roles = {
       admin: {
@@ -57,14 +72,17 @@ export default {
         menu: [
           methodistListItem,
           teacherListItem,
-          studentListItem
+          studentListItem,
+          scheduleListItem,
+          subjectsListItem,
+          performanceListItem
         ]
       },
       student: {
         title: 'Особистий кабінет студента',
         menu: [
           {
-            title: 'Розклад',
+            title: 'Мій розклад',
             icon: 'event',
             click: () => this.navigate('/students/'+userId+'/subjects')
           },
@@ -79,13 +97,19 @@ export default {
         title: 'Особистий кабінет методиста',
         menu: [
           teacherListItem,
-          studentListItem
+          studentListItem,
+          scheduleListItem,
+          subjectsListItem,
+          performanceListItem
         ]
       },
       teacher: {
         title: 'Особистий кабінет викладача',
         menu: [
-          studentListItem
+          studentListItem,
+          scheduleListItem,
+          subjectsListItem,
+          performanceListItem
         ]
       }
     };
