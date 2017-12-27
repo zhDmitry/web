@@ -6,9 +6,12 @@
 
 <script>
 export default {
-  name: 'app',
-  data: () => ({
-
-  })
-}
+  name: "app",
+  data: () => ({})
+};
 </script>
+<style>
+.fc-content {
+  color: white;
+}
+</style>
